@@ -38,7 +38,7 @@
     <?php
 
         $booking_number = rand(10,100);
-        $name = $_POST['name'];
+        $_name = $_POST['name'];
         $checkIn = $_POST['checkIn'];
         $duration = $_POST['duration'];
         $roomType = $_POST['roomType'];
@@ -48,7 +48,7 @@
         $checkOut = date('Y-m-d',strtotime('+'.$duration.'day',strtotime($checkIn)));
 
             if ($roomType == "Standard") {
-                $total = ($duration*90)+20;
+                $total = ($duration*900)+20;
             } else if ($roomType == "Superior") {
                 $total = ($duration*150)+20;
             } else if ($roomType == "Luxury") {

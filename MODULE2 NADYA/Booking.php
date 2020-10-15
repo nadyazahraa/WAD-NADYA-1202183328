@@ -35,7 +35,7 @@
 
     </header>
 
-    <form class="bg-light" action="My_Booking.php" method="POST">
+    <from class="bg-light" action="My_Booking.php" method="POST">
         <div class="container p-5 d-flex justify-content-center align-items-center">
             <div class="col col-lg-4 d-flex justify-content-left align-items-left">
                 <div class="shadow p-4 lg-5 bg-white rounded">
