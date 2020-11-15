@@ -38,7 +38,7 @@
     <?php
 
         $booking_number = rand(10,100);
-        $_name = $_POST['name'];
+        $name = $_POST['name'];
         $checkIn = $_POST['checkIn'];
         $duration = $_POST['duration'];
         $roomType = $_POST['roomType'];
@@ -80,6 +80,7 @@
                     <td> <?= $phoneNumber ?> </td>
                     <td> <?= $services ?> </td>
                     <?php echo "<td> $".$total."</td>"; ?>
+                </tr>    
             </tbody>
         </table>
         <div style="text-align: center;">
