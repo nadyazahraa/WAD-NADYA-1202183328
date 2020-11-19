@@ -14,7 +14,7 @@ if(isset($_POST['update'])) {
     $price = $_POST['price'];
     $benefit = explode(",", $_POST['benefit']);
 
-    $query = "UPDATE modul3_crud SET name = '$name', description = '$description', picture = '$picture', category = '$category', date = '$date', start = '$start', end = '$end', place = '$place', price = '$price', benefit = '$benefit'";
+    $query = "UPDATE INTO modul3_crud SET name = '$name', description = '$description', picture = '$picture', category = '$category', date = '$date', start = '$start', end = '$end', place = '$place', price = '$price', benefit = '$benefit'";
     $update = mysqli_query($database,$query);
 }
 ?>
