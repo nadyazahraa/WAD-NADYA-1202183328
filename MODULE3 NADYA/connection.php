@@ -5,9 +5,9 @@ class connect {
     var $password = "NZoktober10";
     var $database = "user";
     var $conn;
-
+ 
     function __construct() {
-        $this->conn = mysql_connect($this->host, $this->username, $this->password, $this->database);
+        $this->conn = mysqli_connect($this->host, $this->username, $this->password, $this->database);
     }
 
     function input($name,$description,$picture,$category,$date,$start,$end,$place,$price,$benefit) {
@@ -16,7 +16,7 @@ class connect {
     }
 
     function delete($id) {
-        $delete = mysqli_query($this->conn,"DELETE FORM modul3_crud WHERE ID = $ID");
+        $delete = mysqli_query($this->conn,"DELETE FROM modul3_crud WHERE ID = $ID");
         return $delete;
     }
 

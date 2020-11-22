@@ -7,7 +7,7 @@ if(isset($id) and $id!=""){
     $data =  mysqli_fetch_array($connect->details($id));
   }
 ?>
-
+ 
 
 <!DOCTYPE html>
 <html lang="en">

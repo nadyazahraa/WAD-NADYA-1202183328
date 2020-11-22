@@ -11,7 +11,7 @@ if(isset($_POST['input'])) {
     $date = $_POST['date'];
     $start =  $_POST['start'];
     $end =  $_POST['end'];
-    $place = $_POST['[place'];
+    $place = $_POST['place']; 
     $price = $_POST['price'];
     $benefit = implode(",", $_POST['benefit']);
 

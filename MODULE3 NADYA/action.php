@@ -7,7 +7,7 @@
     $picture = isset($_POST['picture']) ? $_POST['picture'] : '';
     $category = $_POST['category'];
     $date = $_POST['date'];
-    $start =  $_POST['start'];
+    $start =  $_POST['start']; 
     $end = $_POST['end'];
     $place = $_POST['[place'];
     $price = $_POST['price'];
