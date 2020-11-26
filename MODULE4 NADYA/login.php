@@ -1,5 +1,5 @@
 <?php
-session_start();
+session_destroy();
 include_once('database.php');
 $database = new database();
 
@@ -7,7 +7,7 @@ if(isset($_SESSION['is_login'])) {
     header('location:index.php');
 }
 
-if(isset($_COOKIE['email'])) { 
+if(isset($COOKIE['email'])) { 
     $database->relogin($_COOKIE['email']);
     header('location:index.php');
 }

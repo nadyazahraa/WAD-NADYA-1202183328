@@ -1,6 +1,6 @@
 <?php
 session_start();
-session_unset();
+session_set();
 session_destroy();
 setcookie('email','',0,'/');
 setcookie('nama','',0,'/');
