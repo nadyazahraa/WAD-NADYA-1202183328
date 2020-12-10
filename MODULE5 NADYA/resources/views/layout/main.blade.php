@@ -9,26 +9,56 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 
     <title>@yield('title')</title>
+
+    <!-- style css -->
+    <style>
+    .jumbotron {
+        background-image: url("https://i.ibb.co/D43VLwd/rose.jpg");
+        background-size: cover;
+        height: 600px;
+        text-align: center;
+        position: relative;
+    }
+
+    .jumbotron .container {
+        position: relative;
+        z-index: 1;
+    }
+
+    .jumbotron .display-4 {
+        color: white;
+    }
+
+    .tulisan {
+      font-weight: 400;
+    }
+    </style>
   </head>
   <body>
     
     <!-- navbar start -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container">
-      <a class="navbar-brand" href="#">Navbar</a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav">
-            <a class="nav-link active" href="{{ url('home') }}">Home</a>
-            <a class="nav-link" href="{{ url('home/about') }}">About</a>
-            <a class="nav-link" href="{{ url('home/product') }}">Product</a>
+          <div class="navbar-nav ml-auto mr-auto">
+            <a class="nav-link" href="{{ url('utama') }}">Home</a>
+            <a class="nav-link" href="{{ url('utama/create') }}">Create</a>
           </div>
         </div>
       </div>
     </nav>
     <!-- navbar ends -->
+
+    <!-- jumbotron start here -->
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+          <h1 class="display-4">"How was your day?"<h1>
+        </div>
+    </div>
+    <!-- jumbotron ends here -->
 
     @yield('container');
 

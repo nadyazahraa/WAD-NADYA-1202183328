@@ -31,7 +31,7 @@
                       @csrf
                       <button class="btn btn-danger" type="submit" value="delete">Delete</button>
                     </form>
-                </th>
+                </th> 
             </tr>
             @endforeach    
         </tbody>

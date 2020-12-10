@@ -16,11 +16,6 @@ class WadController extends Controller
         return view('MODULE5 NADYA/product');
     }
 
-    public function order() 
-    {
-        return view('MODULE5 NADYA/order');
-    }
-
     public function history() 
     {
         return view('MODULE5 NADYA/history');

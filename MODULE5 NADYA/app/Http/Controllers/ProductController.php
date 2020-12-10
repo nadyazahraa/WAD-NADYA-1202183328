@@ -12,7 +12,7 @@ class ProductController extends Controller
     public function index()
     {
         $product = Product::all();
-        return view('MODULE5 NADYA/crud_product/output', compact('product'));
+        return view('MODULE5 NADYA/crud_product/output', ['product' => $product]);
     }
 
 
@@ -40,14 +40,17 @@ class ProductController extends Controller
          ]);
      
          if($request->hasFile('img_path')){
-            $cover = $request->file('img_path')->store('public/assets/covers');
+            $file = $request->file('img_path');
+            $imageName = time()."_".$file->getClientOriginalName();
+    
+            $request->img_path->move(public_path('assets/covers'), $imageName);
 
             Product::create([
             'name' => $request->name,
             'price' => $request->price,
             'description' => $request->description,
             'stock' => $request->stock,
-            'img_path' =>$cover,
+            'img_path' =>$imageName,
 
          ]);
 
@@ -95,7 +98,7 @@ class ProductController extends Controller
 
 
     // Remove the specified resource from storage.
-    public function destroy(Product $product)
+    public function destroy(Product $product) 
     {
         $product->delete();
         return redirect()->route('terserah');

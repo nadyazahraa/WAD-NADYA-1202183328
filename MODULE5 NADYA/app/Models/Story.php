@@ -5,7 +5,8 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Milky extends Model
+class Story extends Model
 {
-    protected $table = 'milky';
+    protected $fillable = ['title','level','story'];
+    public $timestamps = false;
 }
